@@ -9,6 +9,7 @@ const cors = require("cors");
 //mongostore
 const MongoStore = require("connect-mongo");
 const Contact = require("./models/Contact");
+const port = process.env.PORT || 4000;
 
 // Create an Express app
 const app = express();
@@ -183,6 +184,6 @@ app.get(
 );
 
 // Start the server
-app.listen(4000, () => {
-  console.log("Server started on port 4000");
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
 });
