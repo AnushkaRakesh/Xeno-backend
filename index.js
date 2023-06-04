@@ -183,7 +183,7 @@ app.get(
 app.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    successRedirect: "http://localhost:8000",
+    successRedirect: "https://xeno-project.netlify.app/",
     failureRedirect: "/login",
   })
 );
