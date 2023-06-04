@@ -170,6 +170,11 @@ app.post("/update/:username/:contactId", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  console.log("App is running");
+  res.send("App is running");
+});
+
 app.get(
   "/auth/google",
   passport.authenticate("google", { scope: ["email", "profile"] })
